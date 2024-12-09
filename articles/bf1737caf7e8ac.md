@@ -69,7 +69,7 @@ graph TD
 ## その他の案
 
 採用はしませんでしたが、以下のような案もありました。
-メリデメや選定の背景を簡単にまとめておきます。
+メリット・デメリットや選定の背景を簡単にまとめておきます。
 
 - [Datastream for BigQuery](https://cloud.google.com/datastream-for-bigquery?hl=ja)を使う
   - ⭕️ ニアリアルタイム更新が可能かつオートスケーリングで設定も非常に簡単そう
