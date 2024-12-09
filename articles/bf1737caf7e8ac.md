@@ -103,7 +103,6 @@ from pyspark.sql.functions import col, udf
 from pyspark.sql.types import StringType
 
 # 環境変数の取得
-
 args: Dict[str, str] = getResolvedOptions( # Glue ジョブ内で利用したい環境変数を指定
 sys.argv,
 ["JOB_NAME", "env", "region", "output_bucket_name", "connection_name"],
@@ -114,12 +113,10 @@ output_bucket_name: str = args["output_bucket_name"]
 connection_name: str = args["connection_name"]
 
 # コンテキストやセッションの初期化
-
 glueContext: GlueContext = GlueContext(SparkContext.getOrCreate())
 spark: SparkSession = glueContext.spark_session
 
 # Glue データカタログから接続情報を取得
-
 glue_client = boto3.client("glue")
 connection = glue_client.get_connection(Name=connection_name)
 connection_properties = connection["Connection"]["ConnectionProperties"]
@@ -129,12 +126,10 @@ db_pass = connection_properties["PASSWORD"]
 db_name = jdbc_url.split("/")[-1]
 
 # ジョブの開始
-
 job = Job(glueContext)
 job.init(args["JOB_NAME"], args)
 
 # テーブル一覧を PySpark の DataFrame として取得し、リストに変換
-
 jdbc_url += "?characterEncoding=utf8&useSSL=true&&rewriteBatchedStatements=true"
 properties: Dict[str, str] = {
 "user": db_user,
@@ -155,7 +150,6 @@ def mask_and_export(
 spark: SparkSession, table: str, jdbc_url: str, properties: Dict[str, str]
 ) -> None:
 df: DataFrame = spark.read.jdbc(url=jdbc_url, table=table, properties=properties)
-
     # マスキング処理
     if table == "users":
         df = df.withColumn("age_groups", age_decade_udf(col("birthday")))
@@ -168,12 +162,10 @@ df: DataFrame = spark.read.jdbc(url=jdbc_url, table=table, properties=properties
 age_decade_udf = udf(get_age_group, StringType())
 
 # テーブルごとに S3 へデータをエクスポート
-
 for table in table_names:
 mask_and_export(spark, table, jdbc_url, properties)
 
 # ジョブの完了
-
 job.commit()
 ```
 
