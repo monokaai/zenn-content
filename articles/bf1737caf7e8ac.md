@@ -69,7 +69,7 @@ graph TD
 
 ```
 
-この構成のメリット・デメリットは次の通りです。
+この構成のメリット ⭕️・デメリット ❌ は次の通りです。
 
 - ⭕️ 要件にマッチする中では最もシンプルな構成。[BigQuery Data Transfer の利用料金は無料](https://cloud.google.com/bigquery-transfer/pricing?hl=ja)なので、Glue を実行した時間と S3、BigQuery のみで構築・運用が行えコストも低く抑えられる
 - ❌ Glue によるデータ抽出は元 DB のスキーマ変更を検知しないので、変更時には手動でジョブスクリプトも修正してやる必要がある
