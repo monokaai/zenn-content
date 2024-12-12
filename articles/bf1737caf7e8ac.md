@@ -3,7 +3,8 @@ title: "RDS→BigQuery を連携する DWH を構築した時の話"
 emoji: "🛠️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["データ分析", "DWH", "RDS", "Glue", "BigQuery"]
-published: false
+published: true
+published_at: 2024-12-13 08:00
 publication_name: sun_asterisk
 ---
 
