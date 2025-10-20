@@ -4,6 +4,7 @@ emoji: "👏"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["datadog", "データエンジニアリング", "データ活用"]
 published: false
+publication_name: spectee
 ---
 
 ## はじめに
