@@ -2,7 +2,7 @@
 title: "Datadog SUMMIT 2025参加レポ"
 emoji: "👏"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["datadog"]
+topics: ["datadog", "データエンジニアリング", "データ活用"]
 published: false
 ---
 
