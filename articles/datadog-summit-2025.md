@@ -34,8 +34,9 @@ publication_name: spectee
 ![Untitled](/images/datadog-summit-2025/bits_triage.png)
 *インシデント→仮説検証の並列実行→原因特定までがフローチャートで可視化される様子*
 
-AIでの原因特定に至らない場合でも後述のオンコール機能と連携することで、人が速やかに対応を引き継げます。
-また「デプロイ後のエラー発生状況を監視して自動でRevertする」「カナリアリリースとともにエラー率を計測する」といった機能もありました。
+またDatadogには「[デプロイ後のエラー発生状況を監視して自動でRevertする](https://www.datadoghq.com/blog/change-overlays/)」「[カナリアリリースとともにエラー率を計測する](https://docs.datadoghq.com/ja/tracing/services/deployment_tracking/#%E3%82%AB%E3%83%8A%E3%83%AA%E3%82%A2%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4)」といった機能もあり、BitsAIと組み合わせることで、より安全なリリースをサポートしてくれると感じました。
+
+そしてAIでの原因特定に至らない場合でも後述のオンコール機能と連携することで、人が速やかに対応を引き継げます。
 
 ### オンコール
 
