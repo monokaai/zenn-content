@@ -1,5 +1,5 @@
 ---
-title: "Datadog SUMMIT 2025参加レポ"
+title: "Datadog Summit Tokyo 2025 参加レポ"
 emoji: "👏"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["datadog", "データエンジニアリング", "データ活用"]
